@@ -1,0 +1,45 @@
+.footer {
+  width: 100vw;
+  height: 37vh;
+  background-color: #252b3b;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerline {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 1.2rem;
+  row-gap: 10px;
+}
+.footerline > span {
+  margin-bottom: 1.3rem;
+}
+.footerline > a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+.innerfooter {
+  display: flex;
+  flex-direction: row;
+
+  width: 90vw;
+  column-gap: 10rem;
+}
+.f-input {
+  outline: none;
+  padding: 0.5rem;
+}
+.f-input::placeholder {
+  color: #4da0fd;
+  font-size: 1.3rem;
+}

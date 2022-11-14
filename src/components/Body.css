@@ -1,0 +1,92 @@
+.m-title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 60px;
+}
+.m-text {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 29px;
+}
+.m-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+}
+a {
+  color: #4da0fd;
+  text-decoration: none;
+}
+.m-meet-2 {
+  width: 50vw;
+  align-items: center;
+  overflow: hidden;
+}
+.b-title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 60px;
+}
+.b-text {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 29px;
+}
+.b-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+}
+a {
+  color: #4da0fd;
+  text-decoration: none;
+}
+.b-meet-2 {
+  width: 50vw;
+  align-items: center;
+  overflow: hidden;
+}
+
+.g-title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 60px;
+}
+.g-text {
+  font-style: normal;
+
+  font-size: 18px;
+  line-height: 29px;
+}
+.g-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+}
+a {
+  color: #4da0fd;
+  text-decoration: none;
+}
+.g-meet-2 {
+  width: 50vw;
+  align-items: center;
+  overflow: hidden;
+}
+.m-meet-1 {
+  text-align: start;
+  width: 465px;
+  height: 363px;
+}
+.g-meet-1 {
+  text-align: start;
+  width: 465px;
+  height: 363px;
+}
+.b-meet-1 {
+  text-align: start;
+  width: 465px;
+  height: 363px;
+}
