@@ -27,6 +27,14 @@ export const Head = ({ color, path }) => {
         />
       </div>
       <div className="w-50 d-flex flex-row justify-content-around">
+        <Link
+          className="link"
+          style={{
+            textDecoration: "none",
+            color: "black",
+          }}
+          to="/info"
+        />
         <a className="a" href="">
           Products
         </a>
