@@ -35,6 +35,7 @@ export const Head = ({ color, path }) => {
           }}
           to="/info"
         />
+
         <a className="a" href="">
           Products
         </a>
