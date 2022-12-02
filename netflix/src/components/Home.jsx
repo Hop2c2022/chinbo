@@ -1,5 +1,6 @@
 import React from "react";
 import "./home.css";
+import Movie from "./Movie";
 import { Link } from "react-router-dom";
 import { Header } from "./Header";
 
@@ -24,6 +25,7 @@ export const Home = () => {
         </div>
         <div></div>
       </div>
+      <Movie />
     </div>
   );
 };
