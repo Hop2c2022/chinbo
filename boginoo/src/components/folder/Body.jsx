@@ -56,7 +56,21 @@ export const Body = () => {
             <div>
               <p style={{ color: "#02B589" }}>Намайг сана</p>
             </div>
-            <p>Нууц үгээ мартсан</p>
+            <Link className="nuuts" to="/forgot_pass">
+              <button
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  color: "black",
+                  border: "none",
+                  backgroundColor: "white",
+                  marginTop: "20px",
+                  textDecoration: "underline",
+                }}
+              >
+                Нууц үгээ мартсан
+              </button>
+            </Link>
           </div>
           <Link className="link" to="/login">
             <button className="second">НЭВТРЭХ </button>

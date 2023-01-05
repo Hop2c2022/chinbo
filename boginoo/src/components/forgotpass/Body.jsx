@@ -1,4 +1,5 @@
 import "./Body.css";
+import { Link } from "react-router-dom";
 export const Body = () => {
   return (
     <div className="body">
@@ -20,8 +21,11 @@ export const Body = () => {
             <h1
               style={{ color: "#02B589", fontWeight: "bold", margin: "40px" }}
             >
-              Бүртгүүлэх
+              Нууц үг сэргээх
             </h1>
+            <div>
+              Бид таны цахим хаяг руу нууц үг сэргээх хаяг явуулах болно.
+            </div>
           </div>
           <p> Цахим хаяг</p>
           <input
@@ -37,33 +41,12 @@ export const Body = () => {
             type="text"
             placeholder="   name@mail.domain"
           />
-          <p>Нууц үг</p>
-          <input
-            className="placeholder"
-            style={{
-              width: "381px",
-              height: "44px",
-              borderRadius: "60px",
-              border: "none",
-              boxShadow: " 0px 1px 5px rgba(0, 0, 0, 0.16)",
-            }}
-            type="password"
-            placeholder="  ●●●●●●●●"
-          />
-          <p>Нууц үг давтна уу</p>
-          <input
-            className="placeholder"
-            style={{
-              width: "381px",
-              height: "44px",
-              borderRadius: "60px",
-              border: "none",
-              boxShadow: " 0px 1px 5px rgba(0, 0, 0, 0.16)",
-            }}
-            type="password"
-            placeholder="  ●●●●●●●●"
-          />
-          <button className="second">Бүртгүүлэх </button>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            {" "}
+          </div>
+          <Link className="link" to="/login">
+            <button className="second"> Илгээх</button>
+          </Link>
         </div>
       </div>
     </div>
