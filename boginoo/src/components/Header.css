@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+.first {
+  width: 274px;
+  height: 23px;
+  left: 865px;
+  top: 66px;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #02b589;
+}
+.second {
+  width: 190px;
+  height: 30px;
+  left: 1179px;
+  top: 90px;
+  background-color: #02b589;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 8px;
+  margin: 10px;
+  border: none;
+  font-weight: 800;
+}
+.link {
+  text-decoration: none;
+}

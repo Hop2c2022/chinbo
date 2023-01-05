@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 50px;
+}
+.pinecone {
+  width: 225px;
+  height: 18px;
+  left: 607px;
+  top: 940px;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 18px;
+
+  color: #000000;
+}
+.pineconee {
+  width: 159px;
+  height: 18px;
+  left: 655px;
+  top: 966px;
+
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  border: none;
+  color: #9a9797;
+
+  opacity: 0.2;
+}

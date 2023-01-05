@@ -1,0 +1,51 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1000px;
+}
+.body-son {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 240px;
+  width: 100%;
+  flex-direction: column;
+}
+.zuyag {
+  display: flex;
+  width: 184px;
+  height: 118px;
+}
+.hoyortoi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 800px;
+  height: 50px;
+}
+.baldan {
+  width: 570px;
+  height: 44px;
+  left: 325px;
+  top: 566px;
+  border: 3px;
+  border-radius: 26px;
+  background-color: #f0f0f0;
+}
+.boginsgoh {
+  width: 190px;
+  height: 50px;
+  left: 1179px;
+  top: 56px;
+  background-color: #02b589;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  border: none;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
+}
