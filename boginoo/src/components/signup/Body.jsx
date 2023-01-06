@@ -1,5 +1,14 @@
 import "./Body.css";
+import axios from "axios";
+
 export const Body = () => {
+  const data = async () => {
+    const result = await axios.get("http://localhost:8000/user");
+    const post = await axios.post("http://localhost:8000/user");
+    console.log(result);
+    console.log(post);
+  };
+  data();
   return (
     <div className="body">
       <div className="d-flex-bugd-center">
