@@ -8,7 +8,7 @@ export const Body = () => {
           style={{
             width: "383px",
             height: "812px",
-            marginTop: "100px",
+            marginTop: "20px",
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
@@ -23,30 +23,70 @@ export const Body = () => {
             >
               Нууц үг сэргээх
             </h1>
-            <div>
-              Бид таны цахим хаяг руу нууц үг сэргээх хаяг явуулах болно.
+            <div
+              style={{
+                fontStyle: "normal",
+                fontWeight: "400px",
+                fontSize: "16px",
+                color: "black",
+                textAlign: "center",
+              }}
+            >
+              Бид таны цахим хаяг руу нууц үг <br /> сэргээх хаяг явуулах болно.
             </div>
           </div>
-          <p> Цахим хаяг</p>
-          <input
-            className="placeholder"
+          <div
             style={{
-              width: "381px",
-              height: "44px",
-              borderRadius: "60px",
-              border: "none",
-              boxShadow: " 0px 1px 5px rgba(0, 0, 0, 0.16)",
-              marginRight: "1vw",
+              marginTop: "20px",
             }}
-            type="text"
-            placeholder="   name@mail.domain"
-          />
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          >
+            <p> Цахим хаяг</p>
+            <input
+              className="placeholder"
+              style={{
+                marginTop: "15px",
+                width: "381px",
+                height: "44px",
+                borderRadius: "60px",
+                border: "none",
+                boxShadow: " 0px 1px 5px rgba(0, 0, 0, 0.16)",
+                marginRight: "1vw",
+              }}
+              type="text"
+              placeholder="   name@mail.domain"
+            />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "10px",
+            }}
+          >
             {" "}
           </div>
-          <Link className="link" to="/login">
-            <button className="second"> Илгээх</button>
-          </Link>
+          <div
+            style={{
+              display: "flex",
+              marginTop: "10px",
+            }}
+          >
+            <Link className="link" to="/login">
+              <button
+                className="second"
+                style={{
+                  display: "flex",
+                  width: "380px",
+                  height: "43px",
+                  borderRadius: "100px",
+                  marginTop: "10px",
+                }}
+              >
+                {" "}
+                Илгээх
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

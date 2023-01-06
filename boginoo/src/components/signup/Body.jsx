@@ -18,7 +18,13 @@ export const Body = () => {
           <div className="d-flex-bugd-center">
             {" "}
             <h1
-              style={{ color: "#02B589", fontWeight: "bold", margin: "40px" }}
+              style={{
+                color: "#02B589",
+                fontWeight: "bold",
+                margin: "40px",
+                display: "flex",
+                justifyContent: "center",
+              }}
             >
               Бүртгүүлэх
             </h1>
@@ -63,7 +69,16 @@ export const Body = () => {
             type="password"
             placeholder="  ●●●●●●●●"
           />
-          <button className="second">Бүртгүүлэх </button>
+          <button
+            className="second"
+            style={{
+              display: "flex",
+              marginTop: "30px",
+              width: "382px",
+            }}
+          >
+            Бүртгүүлэх{" "}
+          </button>
         </div>
       </div>
     </div>

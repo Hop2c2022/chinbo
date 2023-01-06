@@ -19,7 +19,13 @@ export const Body = () => {
           <div className="d-flex-bugd-center">
             {" "}
             <h1
-              style={{ color: "#02B589", fontWeight: "bold", margin: "40px" }}
+              style={{
+                color: "#02B589",
+                fontWeight: "bold",
+                margin: "40px",
+                display: "flex",
+                justifyContent: "center",
+              }}
             >
               Нэвтрэх
             </h1>
@@ -53,8 +59,17 @@ export const Body = () => {
           />
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             {" "}
-            <div>
-              <p style={{ color: "#02B589" }}>Намайг сана</p>
+            <div style={{ display: "flex", justifyContent: "row" }}>
+              <input type="checkbox" />
+              <div
+                style={{
+                  color: "#02B589",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                Намайг сана
+              </div>
             </div>
             <Link className="nuuts" to="/forgot_pass">
               <button
@@ -73,7 +88,17 @@ export const Body = () => {
             </Link>
           </div>
           <Link className="link" to="/login">
-            <button className="second">НЭВТРЭХ </button>
+            <button
+              className="second"
+              style={{
+                display: "flex",
+                marginTop: "30px",
+                width: "382px",
+                height: "43px",
+              }}
+            >
+              НЭВТРЭХ{" "}
+            </button>
           </Link>
           <Link className="sign up" to="/signup">
             <button
