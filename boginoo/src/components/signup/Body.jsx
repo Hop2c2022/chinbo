@@ -1,14 +1,17 @@
 import "./Body.css";
 import axios from "axios";
+import { useState } from "react";
 
 export const Body = () => {
-  const data = async () => {
-    const result = await axios.get("http://localhost:8000/user");
-    const post = await axios.post("http://localhost:8000/user");
-    console.log(result);
-    console.log(post);
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const Usbutton = () => {
+    axios.post("http://localhost:8000/user", {
+      password: password,
+      email: email,
+    });
   };
-  data();
+
   return (
     <div className="body">
       <div className="d-flex-bugd-center">
@@ -41,6 +44,7 @@ export const Body = () => {
           <p> Цахим хаяг</p>
           <input
             className="placeholder"
+            onChange={(e) => setEmail(e.target.value)}
             style={{
               width: "381px",
               height: "44px",
@@ -54,6 +58,7 @@ export const Body = () => {
           />
           <p>Нууц үг</p>
           <input
+            onChange={(e) => setPassword(e.target.value)}
             className="placeholder"
             style={{
               width: "381px",
@@ -79,6 +84,7 @@ export const Body = () => {
             placeholder="  ●●●●●●●●"
           />
           <button
+            onClick={Usbutton}
             className="second"
             style={{
               display: "flex",
