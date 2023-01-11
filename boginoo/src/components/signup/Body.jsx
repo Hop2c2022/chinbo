@@ -1,15 +1,18 @@
 import "./Body.css";
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Body = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
   const Usbutton = () => {
     axios.post("http://localhost:8000/user", {
       password: password,
       email: email,
     });
+    navigate("/login");
   };
 
   return (

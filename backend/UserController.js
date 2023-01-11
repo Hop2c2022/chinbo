@@ -1,5 +1,6 @@
 const User = require("./Database/model/user");
 const mongoose = require("mongoose");
+const { TokenGenerator } = require("./helper/helper");
 
 exports.userGetController = async (req, res) => {
   const result = await User.find();
@@ -36,5 +37,25 @@ exports.usersUpdateController = async (req, res) => {
     res.send(`Successfully edited  ${change} to ${value}`);
   } catch (err) {
     res.send(err.message);
+  }
+};
+exports.getuserbyemail = async (req, res) => {
+  const { email } = req.params;
+  const result = await User.findOne({ email: email });
+  res.send(result);
+};
+
+exports.userLogin = async (req, res) => {
+  const { password, email } = req.body;
+  const user = await User.findOne({ email: email });
+  if (!user) res.send(" You don't have any user account, please sign up ");
+
+  if (user.password === password && user.email === email) {
+    const token = await TokenGenerator({ uid: user._id, expires: 1200 });
+    res.send({ token: token });
+    return;
+  } else {
+    res.send("Invalid password or email");
+    return;
   }
 };

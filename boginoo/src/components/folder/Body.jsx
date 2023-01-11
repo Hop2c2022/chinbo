@@ -1,6 +1,22 @@
 import "./Body.css";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 export const Body = () => {
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+  const Logbutton = async () => {
+    const asd = await axios.get(`http://localhost:8000/login/${email}`);
+    if (password === asd?.data?.password) {
+      console.log("success loged in");
+      navigate("/");
+    } else {
+      console.log("failed");
+    }
+  };
+
   return (
     <div className="body">
       <div className="d-flex-bugd-center">
@@ -33,6 +49,7 @@ export const Body = () => {
           <p> Цахим хаяг</p>
           <input
             className="placeholder"
+            onChange={(e) => setEmail(e.target.value)}
             style={{
               width: "381px",
               height: "44px",
@@ -47,6 +64,7 @@ export const Body = () => {
           <p>Нууц үг</p>
           <input
             className="placeholder"
+            onChange={(e) => setPassword(e.target.value)}
             style={{
               width: "381px",
               height: "44px",
@@ -89,6 +107,7 @@ export const Body = () => {
           </div>
           <Link className="link" to="/login">
             <button
+              onClick={() => Logbutton()}
               className="second"
               style={{
                 display: "flex",
