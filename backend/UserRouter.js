@@ -8,10 +8,12 @@ const {
   userLogin,
 } = require("./UserController");
 const { TokenCheckerMiddleware } = require("./middleware");
+// const { authorizer } = require("./authorization/authorization");
 const UserRouter = express.Router();
 
 UserRouter.get("/user", TokenCheckerMiddleware, userGetController)
-  .get("/login/:email", getuserbyemail)
+
+  // authorizer({ type: "user" })
   .post("/user", usersPostController)
   .delete("/user/:id", usersDeleteController)
   .put("/user/:id", usersUpdateController)

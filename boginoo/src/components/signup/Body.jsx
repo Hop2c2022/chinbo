@@ -4,15 +4,23 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const Body = () => {
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
-  const Usbutton = () => {
-    axios.post("http://localhost:8000/user", {
-      password: password,
-      email: email,
-    });
-    navigate("/login");
+  const Usbutton = async () => {
+    if (password === password2) {
+      const res = await axios.post("http://localhost:8000/user", {
+        name: name,
+        password: password,
+        email: email,
+      });
+      console.log(res);
+      navigate("/login");
+    } else {
+      console.log("failed");
+    }
   };
 
   return (
@@ -44,6 +52,21 @@ export const Body = () => {
               Бүртгүүлэх
             </h1>
           </div>
+          <p> Нэр</p>
+          <input
+            onChange={(e) => setName(e.target.value)}
+            className="placeholder"
+            style={{
+              width: "381px",
+              height: "44px",
+              borderRadius: "60px",
+              border: "none",
+              boxShadow: " 0px 1px 5px rgba(0, 0, 0, 0.16)",
+              marginRight: "1vw",
+            }}
+            type="text"
+            placeholder="   Нэр"
+          />
           <p> Цахим хаяг</p>
           <input
             className="placeholder"
@@ -75,6 +98,7 @@ export const Body = () => {
           />
           <p>Нууц үг давтна уу</p>
           <input
+            onChange={(e) => setPassword2(e.target.value)}
             className="placeholder"
             style={{
               width: "381px",

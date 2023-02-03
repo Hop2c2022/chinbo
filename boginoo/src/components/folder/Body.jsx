@@ -2,14 +2,32 @@ import "./Body.css";
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuthContext } from "../../RealContext";
 
 export const Body = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
+  const { isAuthenticated } = useAuthContext();
+
   const Logbutton = async () => {
-    const asd = await axios.get(`http://localhost:8000/login/${email}`);
-    if (password === asd?.data?.password) {
+    const asd = await axios.post("http://localhost:8000/login", {
+      email: email,
+      password: password,
+    });
+    if (asd?.data?.token) {
+      localStorage.setItem("token", asd.data.token);
+      const userData = JSON.stringify(asd.data.userData);
+      localStorage.setItem("userData", userData);
+    }
+    if (isAuthenticated) {
+      window.location = "/";
+    }
+    console.log(asd);
+
+    if (asd.data[0] === "success") {
+      localStorage.setItem("user", asd?.data[1]);
+
       console.log("success loged in");
       navigate("/");
     } else {
